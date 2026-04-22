@@ -10,7 +10,7 @@
 
   <body>
     <header class="main-header">
-      <h1 class="title">1000 IMDB Movies</h1>
+      <h1 class="title">Catalogue of Movies from IMDB</h1>
     </header>
     <div id="card-container"></div>
     <div class="card" style="display: none">
@@ -18,16 +18,23 @@
         <h2>Movie Title</h2>
         <img src="" alt="TV Show Poster" />
         <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-          <li>Bullet Point 4</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
         </ul>
       </div>
     </div>
-    <div class="footer">
-      <button onclick="LastButton()">Last Button</button>
-      <button onclick="NextButton()">Next Button</button>
-    </div>
+     <div class="hover-zone left" onmouseenter="HoverLeft()" onmouseleave="HoverOut()"></div>
+    <div class="hover-zone right" onmouseenter="HoverRight()" onmouseleave="HoverOut()"></div>
+    <button onclick="LastButton()">◀ Last</button>
+    <select onchange="Sort(this.value)">
+      <option value="">-- Sort By --</option>
+      <option value="Meta_score">Rating</option>
+      <option value="Released_Year">Year</option>
+      <option value="Gross">Money</option>
+      <option value="Runtime">Runtime</option>
+    </select>
+    <button onclick="NextButton()">Next ▶</button>
   </body>
 </html>
